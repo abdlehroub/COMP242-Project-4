@@ -1,0 +1,761 @@
+/* General styling for tabs */
+.tab {
+  -fx-content-display: CENTER;	
+    -fx-background-color: #FFFFFF; /* White tab background */
+    -fx-background-radius: 7.0px; 
+    -fx-pref-height: 300.0px; /* Tab height */
+    -fx-pref-width: 100.0px; /* Tab width */
+        -fx-padding: 0px; /* Add padding for better spacing */
+    
+}
+
+/* Styling for tab labels in all states */
+.tab .tab-label {
+    -fx-text-fill: #635bff;           
+    -fx-font-size: 12.0px;              /* Smaller font size */
+    -fx-font-weight: bold;            /* Bold font */
+    -fx-font-family: 'Montserrat';    /* Font family */
+    -fx-rotate: 90.0;                  /* Rotate text 90 degrees (vertical) */
+    -fx-padding: 7.0px 0.0 0.0 0.0;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+        -fx-translate-x: -0px; /* Move the text slightly for better centering */
+        -fx-spacing: 500px; /* Controls spacing between text labels */
+    
+     
+              /* Add top padding to push text upward */
+}
+
+/* Ensure vertical tabs maintain vertical text */
+.tab-pane:vertical .tab-label {
+    -fx-rotate: 90.0;
+        -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #FFFFFF;
+        -fx-alignment: center;
+    -fx-text-alignment: center;
+ 
+}
+
+/* Styling for selected tab */
+.tab:selected {
+    -fx-background-color: #635bff; /* Selected tab background */
+    -fx-text-fill: #FFFFFF;         /* Selected tab text color */
+}
+
+/* Styling for tab label when selected */
+.tab:selected .tab-label {
+    -fx-text-fill: #FFFFFF;
+    -fx-rotate: 90.0;                /* Keep text vertical when selected */
+    -fx-padding: 10.0px 0.0 0.0 0.0; 
+        -fx-alignment: center;
+    -fx-text-alignment: center;        /* Same top padding for consistency */
+}
+
+/* Styling on hover (optional) */
+.tab:hover {
+    -fx-background-color: #635bff;
+        -fx-text-fill: #FFFFFF;
+            -fx-alignment: center;
+    -fx-text-alignment: center;
+    
+}
+
+.tab:hover .tab-label {
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 10.0px 0.0 0.0 0.0;
+
+        -fx-alignment: center;
+    -fx-text-alignment: center;
+    
+}
+
+.tab-pane .tab {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+        -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+.tab-pane .tab-header-area {
+    -fx-translate-y: 80px; /* Moves tabs 30px down */
+        -fx-alignment: center;
+}
+
+
+/****************************
+ * ContextMenu Styling
+ ****************************/
+.context-menu {
+    -fx-background-color: white;
+    -fx-background-radius: 4.0;           /* Rounded corners */
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.16), 8.0, 0.0, 0.0, 4.0);
+    -fx-padding: 8.0;
+    -fx-border-color: transparent;
+    -fx-pref-width: 150.0;
+}
+
+/* Remove default padding between items to have a cleaner look */
+.context-menu .menu-item {
+    -fx-padding: 8.0 40;                  /* Vertical 8px, Horizontal 12px */
+    -fx-background-radius: 4.0;
+    -fx-text-fill: #333333;             /* Dark text color */
+          /* Bold font */
+    
+}
+
+/* Hover effect for menu items */
+.context-menu .menu-item:hover {
+    -fx-background-color: #635bff;
+            -fx-text-fill: #FFFFFF;
+          /* Light hover background */
+}
+
+/****************************
+ * MenuItem Graphic Styling
+ ****************************/
+/* If your icons are ImageViews (PNG/JPG), you can't change their color via CSS. 
+   But you can adjust spacing around them. */
+.context-menu .menu-item .graphic {
+    -fx-padding: 0.0 15.0 0.0 0.0;               /* Space between icon and text */
+    /* For an SVG or shape, you could do: -fx-fill: #333; */
+}
+
+/* Selected/focused menu item styling (when using keyboard navigation) */
+.context-menu .menu-item:focused {
+    -fx-background-color: #635bff;
+            -fx-text-fill: #FFFFFF;
+    
+}
+
+/****************************
+ * Optional: Arrow styling
+ ****************************/
+/* If your context menu had submenus, the arrow can also be styled. 
+   This example just hides it for a clean look if there are submenus. */
+.menu-item .arrow {
+    -fx-opacity: 0.0;
+}
+
+
+/* Styling for the graphic (image) in tabs */
+
+
+
+/* Remove default tab animations for a snappier UI */
+.tab-pane {
+   
+    -fx-background-color: #f5f8fc;
+}
+
+/* Each tab has a white background and no border */
+
+
+/* When hovering over a tab (not selected), give it a subtle background color */
+
+
+/* When a tab is selected, give it a purple background */
+.tab:selected {
+    -fx-background-color: #635bff;
+}
+
+/* The default text for a tab label */
+.tab-label {
+    -fx-text-fill: #635bff;
+    -fx-font-size: 14.0px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Montserrat';
+    -fx-padding: 8.0px;
+
+    -fx-rotate: 90.0; 
+            -fx-spacing: 500px; /* Controls spacing between text labels */
+    
+}
+
+/* Text color when a tab is selected */
+.tab:selected .tab-label {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Text color on hover (not selected) */
+.tab:hover .tab-label {
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Graphics (icons) inside tabs */
+
+
+
+
+.text-field {
+    /* Subtler rounding: 8px corners instead of 20px */
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8.0;
+    -fx-border-color: #e3e7ea;
+    -fx-border-radius: 8.0;
+    -fx-border-width: 1.0;
+
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 10.0px;
+    -fx-text-fill: #635bff;
+    -fx-prompt-text-fill: #e3e7ea;
+}
+
+/* Hover effect */
+.text-field:hover {
+    -fx-border-color: #e3e7ea;
+}
+
+/* Focused state: highlight border color and width */
+.text-field:focused {
+    -fx-border-color: #635bff;
+    -fx-border-width: 2.0;
+}
+
+/* Custom style for HBox with rounded corners and white background */
+.rounded-vbox {
+    -fx-background-color: white;       /* White background */
+    -fx-spacing: 10.0;       
+    -fx-pref-width: 1210.0;            /* Optional spacing between children */
+    
+    /* Optional: border styling */
+
+}
+
+
+/* ==========================
+   🌟 Base TableView Styling
+   ========================== */
+
+
+/* ==========================
+   🌟 Base TableView Styling
+   ========================== */
+.table-view {
+    -fx-background-color: white; /* White table background */
+    -fx-border-color: #E5E7EB;   /* Soft gray border */
+    -fx-border-radius: 12.0px;     /* Rounded corners */
+    -fx-background-radius: 12.0px;
+}
+
+/* ==========================
+   🌟 Header (Column Titles)
+   ========================== */
+/* Change the background color of the entire header row */
+.table-view .column-header-background {
+    -fx-background-color: #FFFFFF; /* Dark blue-gray */
+    -fx-border-color: #E5E7EB; /* Soft gray border */
+    -fx-border-width: 0.0 0.0 1.0px 0.0; /* Bottom border */
+        -fx-background-radius: 12.0px;
+    
+}
+
+/* Change the background color of each column header (title) */
+.table-view .column-header {
+	-fx-background-radius: 12.0px;
+    -fx-background-color: #FFFFFF; /* Dark blue-gray */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14.0px;
+    -fx-font-family: "Montserrat";
+    -fx-alignment: CENTER;
+    -fx-padding: 12.0px;
+}
+
+
+/* ==========================
+   🌟 Table Cells
+   ========================== */
+/* Base cell styling */
+.table-cell {
+    -fx-text-fill: #374151; /* Dark gray text */
+    -fx-font-size: 10.0px;
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+     -fx-font-family: "Montserrat";
+    
+    
+}
+/* Vertical Scroll Bar */
+.table-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 8px;
+}
+
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color: #a099ff; /* Soft purple shade */
+    -fx-background-radius: 10px;
+    -fx-opacity: 0.8;
+}
+
+.table-view .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #6a5acd; /* Darker purple on hover */
+}
+
+.table-view .scroll-bar:vertical .track {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 10px;
+}
+
+/* Horizontal Scroll Bar */
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-height: 8px;
+}
+
+.table-view .scroll-bar:horizontal .thumb {
+    -fx-background-color: #a099ff;
+    -fx-background-radius: 10px;
+    -fx-opacity: 0.8;
+}
+
+.table-view .scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #6a5acd;
+}
+
+.table-view .scroll-bar:horizontal .track {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 10px;
+}
+
+
+
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF; /* White */
+}
+
+/* ==========================
+   🌟 Row Hover & Selection Effects
+   ========================== */
+/* Hover effect (soft blue highlight) */
+.table-row-cell:filled:hover {
+    -fx-background-color: #E0E7FF;
+}
+
+/* Selected row effect */
+.table-row-cell:filled:selected {
+    -fx-background-color: #635bff; /* Bright blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Change text color in selected row */
+.table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+/* ==========================
+   🌟 Column Borders
+   ========================== */
+.table-view .table-column {
+    -fx-border-color: #E5E7EB; /* Light gray dividers */
+    -fx-border-width: 0.0 0.0px 0.0 0.0; /* Thin right border */
+}
+
+/* ==========================
+   🌟 Scrollbar Styling
+   ========================== */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #D1D5DB; /* Gray thumb */
+    -fx-background-radius: 5.0px;
+}
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: #F3F4F6; /* Light gray track */
+}
+.label {
+    -fx-font-size: 10.0px; /* Adjust text size */
+    -fx-alignment: CENTER;
+    -fx-font-family: "Montserrat";
+}
+
+
+#myBorderPane {
+    -fx-background-color: #f5f8fc; /* Light gray */
+}
+
+.custom-grid-pane {
+  -fx-background-color: white;       /* White background */
+    -fx-background-radius: 10.0;          /* Rounded corners (adjust radius as needed) */
+    -fx-padding: 40.0 , 40.0 , 40.0 , 40.0;                   /* Optional inner padding */
+    -fx-pref-width: 100.0;            /* Optional spacing between children */
+     -fx-pref-height: 100.0;            /* Optional spacing between children */
+     -fx-border-color: #e0e0e0;          /* Light gray border */
+    -fx-border-width: 1.0;                /* Border thickness */
+    -fx-border-radius: 10.0;              /* Rounded border corners matching background */
+    -fx-effect: dropshadow(three-pass-box, rgba(0.0,0.0,0.0,0.16), 8.0, 0.0, 0.0, 4.0);
+}
+.radio-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333; /* Dark gray text */
+    -fx-font-size: 10.0px;
+    -fx-padding: 10.0 , 10.0 , 10.0 , 10.0;
+        	-fx-background-radius: 12.0px;
+            	-fx-border-radius: 12.0px;
+            	    -fx-font-family: "Montserrat";
+            	
+    
+}
+
+/* Remove default styling */
+.radio-button .radio {
+    -fx-background-color: transparent;
+    	-fx-background-radius: 12.0px;
+          	-fx-border-radius: 12.0px;
+  
+    -fx-border-color: #635bff;
+    -fx-border-width: 1.0px;
+}
+
+/* Change the circle color when the radio button is selected */
+.radio-button:selected .radio {
+    -fx-background-color: white; /* White circle */
+        	-fx-background-radius: 12.0px;
+        	-fx-border-radius: 12.0px;
+    
+    -fx-border-color: #635bff; /* Optional: Change border color */
+}
+/* 🌟 Error Alert Dialog */
+.dialog-pane {
+    -fx-background-color: #FFFFFF; /* Light background */
+    -fx-border-color: #E5E7EB; /* Subtle gray border */
+    -fx-border-radius: 10.0px; /* Rounded edges */
+    -fx-background-radius: 10.0px;
+}
+/* 🔴 Error Title Text */
+.dialog-pane .header-panel .label {
+	
+    -fx-font-size: 12.0px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #374151; /* Red error title */
+}
+
+/* 📜 Error Content Text */
+.dialog-pane .content {
+    -fx-font-size: 12.0px;
+    -fx-text-fill: #374151; /* Dark gray text */
+}
+
+/* 🎯 Button Styling */
+.dialog-pane .button {
+    -fx-background-color: #6366F1; /* Primary Blue */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8.0px;
+    -fx-padding: 6.0px 16.0px;
+}
+
+/* 🔘 Button Hover Effect */
+.dialog-pane .button:hover {
+    -fx-background-color: #FFFFFF; /* Darker Blue on Hover */
+        -fx-text-fill: #6366F1;
+    
+}
+/* 🌟 Base ComboBox Styling */
+.combo-box {
+    -fx-background-color: rgba(255.0, 255.0, 255.0, 0.7); /* White with 70% opacity */
+        -fx-background-radius: 12.0px;
+    -fx-border-radius: 12.0px; /* Rounded corners */
+    -fx-padding: 6.0px;
+    -fx-border-color: #6366F1; /* Blue border */
+    -fx-border-width: 1.0px;
+    -fx-font-size: 10.0px;
+    -fx-text-fill: #6366F1; /* Blue text */
+}
+
+/* 📜 Dropdown Menu */
+.combo-box-popup .list-view {
+    -fx-background-color: rgba(255.0, 255.0, 255.0,0.95); /* White with 90% opacity */
+    -fx-border-color: #6366F1; /* Blue border */
+    -fx-border-radius: 8.0px;
+        -fx-background-radius: 12.0px;
+        -fx-padding: 10.0px;
+    -fx-border-insets: 7.0px;
+    -fx-background-insets: 7.0px;
+}
+
+/* 🔘 Dropdown List Items */
+.combo-box-popup .list-cell {
+	    -fx-background-color: rgba(255.0, 255.0, 255.0, 0.0); /* White with 90% opacity */
+    -fx-text-fill: #6366F1; /* Blue text */
+    -fx-background-radius: 8.0px;
+                	    -fx-font-family: "Montserrat";
+    
+}
+
+/* 🎯 Hover Effect for Items */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(99.0, 102.0, 241.0, 0.2); /* Light blue hover */
+    -fx-text-fill: #1E3A8A; /* Darker blue text */
+                	    -fx-font-family: "Montserrat";
+        -fx-font-weight: bold;
+            -fx-background-radius: 8.0px;
+        
+    
+}
+
+/* 🔵 Selected Item */
+.combo-box .list-cell:selected {
+    -fx-background-color: rgba(99.0, 102.0, 241.0, 0.0); /* Semi-transparent blue */
+    -fx-text-fill: #6366F1;
+                	    -fx-font-family: "Montserrat";
+        -fx-font-weight: bold;
+            -fx-background-radius: 8.0px;
+        
+    
+}
+
+
+/* 🔘 ComboBox Arrow Button */
+.combo-box .arrow-button {
+    -fx-background-radius: 12.0px; /* Rounded edges */
+    -fx-background-color: rgba(255.0, 255.0, 255.0, 0.5); /* Transparent white */
+    -fx-border-color: transparent;
+}
+
+/* 🔘 Arrow Icon (Dropdown) */
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #6366F1; /* Blue arrow */
+}
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0; /* Light gray border */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.list-view .list-cell {
+    -fx-padding: 8px;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1px 0; /* Only bottom border */
+    -fx-font-size: 10px;
+    -fx-font-family: "Montserrart";
+    -fx-background-radius: 5px;
+    
+        -fx-border-radius: 5px;
+}
+
+.list-view .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-width: 0; /* Hide border when empty */
+    -fx-background-radius: 5px;
+    
+        -fx-border-radius: 5px;
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #6366F1;
+    -fx-text-fill: #FFFFFF;
+            -fx-background-radius: 5px;
+    
+        -fx-border-radius: 5px;
+    
+}
+
+.date-picker {
+	-fx-border-color: transparent;
+		-fx-background-color: transparent;
+		-fx-min-width: 180px;
+       -fx-min-height: 30px;
+        -fx-pref-width: 60px;
+       -fx-pref-height: 30px;
+	
+}
+
+/* DatePicker Text Field */
+.date-picker .text-field {
+    -fx-background-color: white;
+    -fx-border-color: #6366F1; /* Purple border */
+    -fx-border-radius: 10px 0px 0px 10px;
+    -fx-background-radius: 10px 0px 0px 10px;
+    -fx-font-size: 10px;
+    -fx-text-fill: #6366F1;
+    -fx-prompt-text-fill: #bbb;
+    
+   
+}
+
+/* DatePicker Popup Button */
+.date-picker .arrow-button {
+    -fx-background-color: #6366F1; /* Purple */
+    -fx-background-radius: 0px 7px 7px 0px;
+    -fx-padding: 10px , 15px , 15px , 15px;
+    -fx-min-width: 60px;
+       -fx-min-height: 1000px;
+        -fx-pref-width: 60px;
+       -fx-pref-height: 80px;
+    
+    
+}
+
+
+
+.date-picker .arrow-button:hover {
+	-fx-text-fill: white;
+    -fx-background-color: #4F46E5;
+}
+.date-picker .spinner .button{
+	-fx-background-color: transparent;
+	-fx-text-fill: white;
+	-fx-background-radius: 5px;
+	-fx-border-radius: 5px;
+	
+}
+.date-picker .spinner .button:hover{
+-fx-background-color: #6366F1;
+	-fx-text-fill: white;	
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+
+/* DatePicker Calendar Popup */
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-border-color: #6366F1;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-pref-height: 190;
+        -fx-pref-width: 190;
+            -fx-font-size: 7;
+    
+        -fx-font-family: "Montserrart";
+            -fx-background-radius: 10px;
+    
+}
+
+/* Calendar Cells */
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #6366F1;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+        -fx-font-size: 7;
+    
+        -fx-font-family: "Montserrart";
+        -fx-border-radius: 10px;
+            -fx-background-radius: 10px;
+    
+    -fx-padding: 5px;
+}
+
+.date-picker-popup .day-cell {
+    -fx-border-radius: 5px;
+            -fx-font-size: 9;
+    
+    -fx-padding: 5px;
+        -fx-font-family: "Montserrart";
+    
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #E0E7FF; /* Light purple hover */
+            -fx-font-size: 9;
+    
+    
+}
+
+.date-picker-popup .selected {
+    -fx-background-color: #4F46E5 !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold;
+            -fx-font-size: 10;
+    
+        -fx-font-family: "Montserrart";
+    
+}
+.date-picker .calendar-grid{
+	    -fx-background-color: white !important;
+    -fx-text-fill: white !important;
+    -fx-font-weight: bold;
+        -fx-font-family: "Montserrart";
+        -fx-background-radius: 10px;
+        -fx-border-radius: 10px;
+                -fx-font-size: 10;
+        
+}
+.date-picker-popup-content{
+	    -fx-background-color: #4F46E5 !important;
+    -fx-text-fill: white !important;
+        -fx-font-family: "Montserrart";
+        -fx-background-radius: 10px;
+        -fx-border-radius: 10px;
+}
+/* Today’s Date Style */
+.date-picker-popup .today {
+    -fx-background-color: #A5B4FC;
+    -fx-text-fill: black;    -fx-font-family: "Montserrart";
+    
+    -fx-font-weight: bold;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #6366F1; /* Purple Border */
+    -fx-border-radius: 20px; /* Outer Border Fully Rounded */
+    -fx-background-radius: 20px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #4F46E5;
+}
+
+/* Style the Inner Content */
+.text-area .content {
+    -fx-background-color: white;
+    -fx-background-radius: 20px; /* Inner Content Rounded */
+}
+
+/* Remove Default Border */
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+
+/* Style the Scroll Bars */
+.text-area .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+/* Style the Scroll Thumb */
+.text-area .scroll-bar .thumb {
+    -fx-background-color: #6366F1; /* Purple Scroll Bar */
+    -fx-background-radius: 20px; /* Rounded Scroll */
+}.text-area .scroll-pane .viewport {
+    -fx-background-radius: 20px;
+    -fx-background-color: transparent;
+}
+.menu-bar {
+    -fx-background-color: white; /* Light background like in your screenshot */
+    -fx-padding: 0 0 0px 2px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0;
+    -fx-max-width:  304px;
+ 
+}
+
+
+
+.menu-bar .menu:hover {
+    -fx-background-color: #6366F1; /* subtle hover effect */
+    -fx-background-radius: 5px;
+}
+
+.menu:showing,
+.menu:focused,
+.menu:armed {
+    -fx-background-color: #6366F1; /* Purple */
+        -fx-background-radius: 5px;
+    
+}
+
+
+
+
+
+
