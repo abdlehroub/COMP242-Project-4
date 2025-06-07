@@ -74,14 +74,6 @@ public class UpdateMovie {
 		grid.add(ratingField, 1, 3);
 		grid.add(buttonsHb, 1, 4);
 
-		Scene scene = new Scene(grid, 720, 400);
-		scene.getStylesheets().add(UpdateMovie.class.getResource("application.css").toExternalForm());
-		popupStage.setScene(scene);
-		popupStage.setResizable(false);
-		popupStage.showAndWait();
-
-		cancelButton.setOnAction(e -> popupStage.close());
-
 		saveButton.setOnAction(e -> {
 			try {
 				String newTitle = titleField.getText().trim();
@@ -109,6 +101,14 @@ public class UpdateMovie {
 				new ErrorAlert("Invalid input: " + ex.getMessage());
 			}
 		});
+
+		cancelButton.setOnAction(e -> popupStage.close());
+
+		Scene scene = new Scene(grid, 720, 400);
+		scene.getStylesheets().add(UpdateMovie.class.getResource("application.css").toExternalForm());
+		popupStage.setScene(scene);
+		popupStage.setResizable(false);
+		popupStage.showAndWait();
 
 	}
 }

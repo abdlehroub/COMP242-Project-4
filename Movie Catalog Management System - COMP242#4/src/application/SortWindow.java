@@ -98,12 +98,6 @@ public class SortWindow {
 		root.setStyle("-fx-background-color: #FFFFFF");
 		loadPage(ascRb.isSelected());
 
-		Scene scene = new Scene(root, 800, 400);
-		scene.getStylesheets().add(SortWindow.class.getResource("application.css").toExternalForm());
-		popupStage.setScene(scene);
-		popupStage.setResizable(false);
-		popupStage.showAndWait();
-
 		prevButton.setOnAction(e -> goPrev(ascRb.isSelected()));
 		nextButton.setOnAction(e -> goNext(ascRb.isSelected()));
 
@@ -114,6 +108,13 @@ public class SortWindow {
 			loadPage(ascRb.isSelected());
 
 		});
+
+		Scene scene = new Scene(root, 800, 400);
+		scene.getStylesheets().add(SortWindow.class.getResource("application.css").toExternalForm());
+		popupStage.setScene(scene);
+		popupStage.setResizable(false);
+		popupStage.showAndWait();
+
 	}
 
 	public static void goNext(boolean asc) {

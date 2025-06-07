@@ -71,13 +71,7 @@ public class AddMovie {
 		grid.add(ratingLabel, 0, 3);
 		grid.add(ratingField, 1, 3);
 		grid.add(buttonsHb, 1, 4);
-
-		Scene scene = new Scene(grid, 720, 400);
-		scene.getStylesheets().add(AddMovie.class.getResource("application.css").toExternalForm());
-		popupStage.setScene(scene);
-		popupStage.setResizable(false);
-		popupStage.showAndWait();
-
+		
 		saveButton.setOnAction(e -> {
 			try {
 				String title = titleField.getText().trim();
@@ -104,5 +98,13 @@ public class AddMovie {
 			Stage stage = (Stage) cancelB.getScene().getWindow();
 			stage.close();
 		});
+
+		Scene scene = new Scene(grid, 720, 400);
+		scene.getStylesheets().add(AddMovie.class.getResource("application.css").toExternalForm());
+		popupStage.setScene(scene);
+		popupStage.setResizable(false);
+		popupStage.showAndWait();
+
+		
 	}
 }
